@@ -1,25 +1,25 @@
-let screen = document.getElementById('screen');
+let white = document.getElementById('white');
 buttons = document.querySelectorAll('button');
-let screenValue = '';
-for (item of buttons) {
+let whitevalue = '';
+for (let item of buttons) {
     item.addEventListener('click', (e) => {
-        buttonText = e.target.innerText;
-        console.log('Button text is ', buttonText);
-        if (buttonText == 'X') {
-            buttonText = '*';
-            screenValue += buttonText;
-            screen.value = screenValue;
+        buttontext = e.target.innerText;
+        console.log('Button text is ', buttontext);
+        if (buttontext == 'X') {
+            buttontext = '*';
+            whitevalue += buttontext;
+            white.value = whitevalue;
         }
-        else if (buttonText == 'C') {
-            screenValue = "";
-            screen.value = screenValue;
+        else if (buttontext == 'C') {
+            whitevalue = "";
+            white.value = whitevalue;
         }
-        else if (buttonText == '=') {
-            screen.value = eval(screenValue);
+        else if (buttontext == '=') {
+            white.value = eval(whitevalue);
         }
         else {
-            screenValue += buttonText;
-            screen.value = screenValue;
+            whitevalue += buttontext;
+            white.value = whitevalue;
         }
 
     })
